@@ -24,6 +24,11 @@ describe('MeetingRoom: ', () => {
     });
   });
 
-  // Class: MeetingRoom, method: isAvailable, attribute: roomAvailable
-
+  describe('enterMeetingRoom: ', () => {
+    it('should make the meeting room unavailable when someone enters', () => {
+      meetingRoom.enterMeetingRoom();
+      expect(meetingRoom.roomAvailable).toEqual(false);
+    });
+  });
+  
 });

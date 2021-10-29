@@ -12,4 +12,8 @@ class MeetingRoom {
       return "This room is available";
     }
   }
+
+  enterMeetingRoom() {
+    return this.roomAvailable = false;
+  }
 }
