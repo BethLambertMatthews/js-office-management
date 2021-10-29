@@ -15,12 +15,16 @@ describe('MeetingRoom: ', () => {
     it('should be "available" by default', () => {
       expect(meetingRoom.roomAvailable).toEqual(true);
     });
-
   });
 
   describe('isAvailable: ', () => {
     it('should check if a meeting room is "available" ', () => {
       expect(meetingRoom.isAvailable()).toEqual("This room is available");
+    });
+
+    it('should display an error if meeting room is "not available" ', () => {
+      meetingRoom.enterMeetingRoom(); // sets the room to "not available"
+      expect(meetingRoom.isAvailable()).toEqual("Sorry, this room is not available");
     });
   });
 
@@ -39,6 +43,4 @@ describe('MeetingRoom: ', () => {
     });
   });
 
-
-  // Class: MeetingRoom, method: leaveMeetingRoom, attribute: roomAvailable => true
 });

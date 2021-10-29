@@ -10,6 +10,8 @@ class MeetingRoom {
   isAvailable() {
     if (this.roomAvailable === true) {
       return "This room is available";
+    } else {
+      return "Sorry, this room is not available";
     }
   }
 
