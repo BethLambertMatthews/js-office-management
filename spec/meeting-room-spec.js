@@ -25,10 +25,20 @@ describe('MeetingRoom: ', () => {
   });
 
   describe('enterMeetingRoom: ', () => {
-    it('should make the meeting room unavailable when someone enters', () => {
+    it('should make the meeting room "not available" when someone enters', () => {
       meetingRoom.enterMeetingRoom();
       expect(meetingRoom.roomAvailable).toEqual(false);
     });
   });
-  
+
+  describe('leaveMeetingRoom: ', () => {
+    it('should make the meeting room "available" when someone leaves', () => {
+      meetingRoom.enterMeetingRoom(); // sets the room to "not available"
+      meetingRoom.leaveMeetingRoom();
+      expect(meetingRoom.roomAvailable).toEqual(true);
+    });
+  });
+
+
+  // Class: MeetingRoom, method: leaveMeetingRoom, attribute: roomAvailable => true
 });

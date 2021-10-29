@@ -16,4 +16,9 @@ class MeetingRoom {
   enterMeetingRoom() {
     return this.roomAvailable = false;
   }
+
+  leaveMeetingRoom() {
+    return this.roomAvailable = true;
+  }
+
 }
