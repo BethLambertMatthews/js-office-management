@@ -22,6 +22,12 @@ describe('Office: ', () => {
     });
   });
 
-  // Class: Office, method: addMeetingRoom(), removeMeetingRoom(), attribute: allMeetingRooms = [ ] array
-
+  describe('removeMeetingRoom: ', () => {
+    it('should remove a meeting room from the office', () => {
+      office.addMeetingRoom(spyMeetingRoom);
+      office.removeMeetingRoom(spyMeetingRoom);
+      expect(office.allMeetingRooms()).toEqual([]);
+    });
+  });
+  
 });

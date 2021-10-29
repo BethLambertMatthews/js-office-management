@@ -12,4 +12,8 @@ class Office {
   addMeetingRoom(meetingRoom) {
     return this._officeRooms.push(meetingRoom);
   }
+
+  removeMeetingRoom(meetingRoom) {
+    return this._officeRooms.pop(meetingRoom);
+  }
 }
