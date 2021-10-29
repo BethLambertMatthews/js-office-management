@@ -16,7 +16,11 @@ class MeetingRoom {
   }
 
   enterMeetingRoom() {
-    return this.roomAvailable = false;
+    if (this.roomAvailable === false) {
+      return this.isAvailable();
+    } else {
+      return this.roomAvailable = false;
+    }
   }
 
   leaveMeetingRoom() {

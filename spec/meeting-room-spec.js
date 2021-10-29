@@ -33,6 +33,11 @@ describe('MeetingRoom: ', () => {
       meetingRoom.enterMeetingRoom();
       expect(meetingRoom.roomAvailable).toEqual(false);
     });
+
+    it('should not be possible to enter a room which is "not available" ', () => {
+      meetingRoom.enterMeetingRoom(); // sets the room to "not available"
+      expect(meetingRoom.enterMeetingRoom()).toEqual("Sorry, this room is not available");
+    });
   });
 
   describe('leaveMeetingRoom: ', () => {
