@@ -6,4 +6,8 @@ class Office {
     this.allMeetingRooms = [];
   }
 
+  addMeetingRoom(meetingRoom) {
+    return this.allMeetingRooms.push(meetingRoom);
+  }
+
 }
