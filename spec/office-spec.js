@@ -6,7 +6,7 @@ describe('Office: ', () => {
 
   beforeEach(() => {
     office = new Office();
-    spyMeetingRoom = jasmine.createSpy('Room 1');
+    spyMeetingRoom = jasmine.createSpyObj('Room 1',['this.name']);
   });
 
   describe('new Office object (constructor method): ', () => {
