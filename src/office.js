@@ -1,13 +1,15 @@
 'use strict';
 
 class Office {
-
   constructor() {
-    this.allMeetingRooms = [];
+    this._officeRooms = [];  // _officeRooms private object
+  }
+
+  allMeetingRooms() {
+    return this._officeRooms;  // method accesses private object
   }
 
   addMeetingRoom(meetingRoom) {
-    return this.allMeetingRooms.push(meetingRoom);
+    return this._officeRooms.push(meetingRoom);
   }
-
 }

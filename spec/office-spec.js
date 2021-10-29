@@ -11,14 +11,14 @@ describe('Office: ', () => {
 
   describe('new Office object (constructor method): ', () => {
     it('should have an empty list of "all meeting rooms" by default', () => {
-      expect(office.allMeetingRooms).toEqual([]);
+      expect(office.allMeetingRooms()).toEqual([]);
     });
   });
 
   describe('addMeetingRoom: ', () => {
     it('should add a new meeting room to the office', () => {
       office.addMeetingRoom(spyMeetingRoom);
-      expect(office.allMeetingRooms).toEqual([spyMeetingRoom]);
+      expect(office.allMeetingRooms()).toEqual([spyMeetingRoom]);
     });
   });
 
