@@ -37,6 +37,7 @@ describe('MeetingRoom: ', () => {
     it('should not be possible to enter a room which is "not available" ', () => {
       meetingRoom.enterMeetingRoom(); // sets the room to "not available"
       expect(meetingRoom.enterMeetingRoom()).toEqual("Sorry, this room is not available");
+      expect(meetingRoom.roomAvailable).toEqual(false);
     });
   });
 
@@ -44,6 +45,13 @@ describe('MeetingRoom: ', () => {
     it('should make the meeting room "available" when someone leaves', () => {
       meetingRoom.enterMeetingRoom(); // sets the room to "not available"
       meetingRoom.leaveMeetingRoom();
+      expect(meetingRoom.roomAvailable).toEqual(true);
+    });
+
+    it('should not be possible to leave a room which is already empty and "available" ', () => {
+      meetingRoom.enterMeetingRoom(); // sets the room to "not available"
+      meetingRoom.leaveMeetingRoom(); // sets the room to "available"
+      expect(meetingRoom.leaveMeetingRoom()).toEqual("This room is available");
       expect(meetingRoom.roomAvailable).toEqual(true);
     });
   });

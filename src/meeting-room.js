@@ -24,7 +24,11 @@ class MeetingRoom {
   }
 
   leaveMeetingRoom() {
-    return this.roomAvailable = true;
+    if (this.roomAvailable === true) {
+      return this.isAvailable();
+    } else {
+      return this.roomAvailable = true;
+    }
   }
 
 }
